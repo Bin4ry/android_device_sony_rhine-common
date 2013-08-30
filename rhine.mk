@@ -94,7 +94,7 @@ PRODUCT_COPY_FILES += \
 # Thermal monitor configuration
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/thermald-8974.conf:system/etc/thermald-8974.conf \
-    $(COMMON_PATH)/rootdir/system/etc/thermald-engine-8974.conf:system/etc/thermald-engine-8974.conf
+    $(COMMON_PATH)/rootdir/system/etc/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -108,6 +108,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/system/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
     frameworks/native/data/etc/com.stericsson.hardware.fm.receiver.xml:system/etc/permissions/com.stericsson.hardware.fm.receiver.xml
+
+NFCEE_ACCESS_PATH := $(COMMON_PATH)/rootdir/system/etc/nfcee_access.xml
+
+PRODUCT_COPY_FILES += \
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 # Custom init / uevent
 PRODUCT_COPY_FILES += \
