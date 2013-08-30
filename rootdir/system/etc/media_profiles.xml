@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2010 The Android Open Source Project
-     Copyright (C) 2012-2013 Sony Mobile Communications AB.
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,9 +12,6 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
-
-     NOTE: This file has been modified by Sony Ericsson Mobile Communications AB /
-     Sony Mobile Communications AB. Modifications are licensed under the License.
 -->
 <!DOCTYPE MediaSettings [
 <!ELEMENT MediaSettings (CamcorderProfiles,
@@ -157,7 +153,6 @@
                    height="1080"
                    frameRate="30" />
 
-            <!-- audio setting is ignored -->
             <Audio codec="aac"
                    bitRate="156000"
                    sampleRate="48000"
@@ -171,7 +166,6 @@
                    height="720"
                    frameRate="30" />
 
-            <!-- audio setting is ignored -->
             <Audio codec="aac"
                    bitRate="156000"
                    sampleRate="48000"
@@ -185,7 +179,7 @@
                    height="480"
                    frameRate="30" />
             <!-- audio setting is ignored -->
-            <Audio codec="aac"
+           <Audio codec="aac"
                    bitRate="156000"
                    sampleRate="48000"
                    channels="2" />
@@ -219,7 +213,7 @@
         Profiles for the front camera
         -->
 
-        <EncoderProfile quality="1080p" fileFormat="mp4" duration="60">
+      <EncoderProfile quality="1080p" fileFormat="mp4" duration="60">
             <Video codec="h264"
                    bitRate="17500000"
                    width="1920"
@@ -364,8 +358,8 @@
         minSampleRate="8000" maxSampleRate="8000"
         minChannels="1" maxChannels="1" />
 
-    <AudioEncoderCap name="amrwb" enabled="true"
-        minBitRate="6600" maxBitRate="23050"
+  <AudioEncoderCap name="amrwb" enabled="true"
+        minBitRate="6600" maxBitRate="23850"
         minSampleRate="16000" maxSampleRate="16000"
         minChannels="1" maxChannels="1" />
 
