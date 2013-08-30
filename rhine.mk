@@ -75,8 +75,39 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
+# QCOM Display
+PRODUCT_PACKAGES += \
+    hwcomposer.msm8974 \
+    gralloc.msm8974 \
+    copybit.msm8974
+
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+# Custom init / uevent
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
+    $(COMMON_PATH)/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc \
+    $(COMMON_PATH)/rootdir/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+    $(COMMON_PATH)/rootdir/system/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
+
+# Thermal monitor configuration
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/thermald-8974.conf:system/etc/thermald-8974.conf \
+    $(COMMON_PATH)/rootdir/system/etc/thermald-engine-8974.conf:system/etc/thermald-engine-8974.conf
+
+# GPS
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/gps.conf:system/etc/gps.conf
+
+# WPA supplicant config
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+
+# FM Radio
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/system/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
+    frameworks/native/data/etc/com.stericsson.hardware.fm.receiver.xml:system/etc/permissions/com.stericsson.hardware.fm.receiver.xml
 
 # Custom init / uevent
 PRODUCT_COPY_FILES += \
